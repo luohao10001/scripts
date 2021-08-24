@@ -14,11 +14,11 @@ on:
 
   repository_dispatch:
 
-    types: faker2
+    types: openwrt-boos4721
 
 jobs:
 
-  repo-faker2:
+  repo-sync:
 
     env:
 
@@ -36,7 +36,7 @@ jobs:
 
           persist-credentials: false
 
-      - name: faker2
+      - name: openwrt
 
         uses: repo-sync/github-sync@v2
 
@@ -51,4 +51,3 @@ jobs:
           destination_branch: "faker2"
 
           github_token: ${{ secrets.PAT }}
-
